@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: seethakrishnangsspringbootdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seethakrishnangsspringbootdocker
+  template:
+    metadata:
+      labels:
+        app: seethakrishnangsspringbootdocker 
+    spec:
+      containers:
+        - name: seethakrishnangsspringbootdocker 
+          image: seethacontainerregistry.azurecr.io/seethakrishnangsspringbootdocker
+          ports:
+          - containerPort: 80
